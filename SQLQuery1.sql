@@ -1,1 +1,0 @@
-﻿select * from Contatoes where ID=3

@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript" src="AngularApp/js/contato.js"></script>
+    <style type="text/css">
+        h11 {
+            color: red;
+        }
+    </style>
+</head>
+<body ng-controller="ContatoController">
+
+    <form class="form-horizontal"  ng-submit="submeter()">
+        <fieldset>
+            <div class="panel panel-primary">
+                <div class="panel-heading">Edição de Contato</div>
+
+                <div class="panel-body" style="font-size:100%">
+                    <div class="form-group">
+
+                        <div class="col-md-11 control-label">
+                            <p class="help-block"><h11>*</h11> Campo Obrigatório </p>
+                        </div>
+                    </div>
+                    <!-- Text input-->
+
+
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" for="Nome">Nome <h11>*</h11></label>
+                        <div class="col-md-8">
+                            <input id="Nome" name="Nome" class="form-control input-md" ng-model="contato.nome" required="" type="text">
+
+                        </div>
+
+                    </div>
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" for="Nome">CPF <h11>*</h11></label>
+                        <div class="col-md-2">
+                            <input id="cpf" name="cpf" placeholder="Apenas números" ng-model="contato.cpf" class="form-control input-md" required="" type="text" maxlength="11" pattern="[0-9]+$">
+                        </div>
+                        <label class="col-md-2 control-label"  for="Nome">RG <h11>*</h11></label>
+                        <div class="col-md-2">
+                            <input id="rg" name="rg" placeholder="Apenas números" ng-model="contato.rg" class="form-control input-md" required="" type="text" maxlength="11" pattern="[0-9]+$">
+                        </div>
+
+
+                    </div>
+                    <!-- Prepended text-->
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" for="prependedtext">Telefone <h11>*</h11></label>
+                        <div class="col-md-2">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                                <input id="prependedtext" name="prependedtext" ng-model="contato.telefone1" class="form-control" placeholder="XX XXXXX-XXXX" required="" type="text" maxlength="13" />
+
+                            </div>
+                        </div>
+
+                       
+                    </div>
+
+                   <!--
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" for="CEP">CEP <h11>*</h11></label>
+                        <div class="col-md-2">
+                            <input id="cep" name="cep" placeholder="Apenas números" ng-model="contato.cep" class="form-control input-md" required="" value="" type="search" maxlength="8" pattern="[0-9]+$">
+                        </div>
+                        <div class="col-md-2">
+                            <button type="button" class="btn btn-primary" onclick="pesquisacep(cep.value)">Pesquisar</button>
+                        </div>
+                    </div>
+                    
+
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" for="prependedtext">Endereço</label>
+                        <div class="col-md-4">
+                            <div class="input-group">
+                                <span class="input-group-addon">Logradouro</span>
+                                <input id="logradouro" name="logradouro" ng-model="contato.logradouro" class="form-control" placeholder="" required=""  type="text">
+                            </div>
+
+                        </div>
+                        <div class="col-md-2">
+                            <div class="input-group">
+                                <span class="input-group-addon">Nº <h11>*</h11></span>
+                                <input id="numero" name="numero" ng-model="contato.numero" class="form-control" placeholder="" required="" type="text">
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="input-group">
+                                <span class="input-group-addon">Bairro</span>
+                                <input id="bairro" name="bairro" ng-model="contato.bairro" class="form-control" placeholder="" required=""  type="text">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" for="prependedtext"></label>
+                        <div class="col-md-4">
+                            <div class="input-group">
+                                <span class="input-group-addon">Cidade</span>
+                                <input id="cidade" name="municipio" ng-model="contato.municipio" class="form-control" placeholder="" required=""  type="text">
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-2">
+                            <div class="input-group">
+                                <span class="input-group-addon">Estado</span>
+                                <input id="estado" name="uf" ng-model="contato.uf" class="form-control" placeholder="" required="" type="text">
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+-->
+
+            <div class="col-md-12">
+                <label class="control-label" for="Cadastrar"></label>
+                <div class="col-md-8">
+                    <button id="Cadastrar" name="Cadastrar" class="btn btn-success" type="Submit">Cadastrar</button>
+                    <a href="/" class="btn btn-primary">Voltar</a>
+                    <hr>
+                </div>
+            </div>
+
+        </fieldset>
+
+
+
+
+    </form>
+
+
+
+
+
+</body>
+</html>

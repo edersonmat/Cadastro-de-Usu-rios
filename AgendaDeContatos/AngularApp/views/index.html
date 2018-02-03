@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div ng-controller="listaContatosController">
+        <div class="container">
+            <div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <form>
+                            <div class="input-group">
+                                <span class="input-group-btn">
+                                    <a href="#!/contatos/new" class="btn btn-primary">Novo Contato</a>
+                                </span>
+
+                                <input class="form-control" placeholder="filtrar pelo nome do contato"
+                                       ng-model="filtro" ng-model-options="{ debounce: 500 }">
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="table-responsive">
+                            <table class="table  table-striped">
+                                <thead>
+                                    <tr>
+                                        <th><input type="checkbox" /></th>
+                                        <!-- <th>Número</th>-->
+                                        <th>Nome</th>
+                                        <th>CPF</th>
+                                        <th>RG</th>
+                                        <th>Telefone</th>
+                                        
+                                        <th>Edit</th>
+                                        <th>Delete</th>
+                                    </tr>
+    </thead>
+    <tbody>
+        <tr class="painel-animado" ng-repeat="contato in contatos | filter:filtro" nome="{{contato.nome}}">
+            <td><input type="checkbox" /></span> </td>
+            <!--<td>{{contato.ID}}</td>-->
+                                        <td>{{contato.nome}}</td>
+                                        <
+                                        <td>{{contato.cpf}}</td>
+                                        <td>{{contato.rg}}</td>
+                                        <td>{{contato.telefone1}}</td>
+                                        <!--<td>{{contato.logradouro}}</td>
+    <td>{{contato.cep}}</td>
+    <td>{{contato.bairro}}</td>
+    <td>{{contato.municipio}}</td>
+    <td>{{contato.uf}}</td>-->
+                                        <td><a href="#!/contatos/edit/{{contato.ID}}" class="btn btn-primary btn-xs">   <span class="glyphicon glyphicon-pencil"></span></></a></td>
+                                        <td><meu-botao-perigo nome="Remover" acao="remover(contato)">Remover</meu-botao-perigo></td>
+                                        <!--<td><a href="#" class="btn btn-danger btn-xs">   <span class="glyphicon glyphicon-trash"></span></></a></td>-->
+                                        <!--<td><p data-placement="top"  title="Edit"><button class="btn btn-primary btn-xs">  <span class="glyphicon glyphicon-pencil"></span></button></p></td>
+    <td><p data-placement="top"  title="Delete"><button class="btn btn-danger btn-xs"  ><span class="glyphicon glyphicon-trash"></span></button></p></td>-->
+                                    </tr>
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
